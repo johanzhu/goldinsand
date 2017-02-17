@@ -296,7 +296,7 @@
         particleCount: 750,
       });
       particleGroupCrash.addEmitter( crashEmitter );
-      scene.add( particleGroupCrash.mesh );
+      //scene.add( particleGroupCrash.mesh );
       
       /*人物*/
      var cameraPos = camera.position.clone();
@@ -436,7 +436,7 @@
 	    }	
 		function render(){
 			if( loading == true){
-	          //load.style.display = 'none';
+	          load.style.display = 'none';
 		    }
 			cScene = scene;
 			cCamera = camera;
