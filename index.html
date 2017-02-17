@@ -22,6 +22,7 @@
 			height: 100%;
 			background: url(img/bc.png) no-repeat;
 			background-size: cover;
+			pointer-events: none;
 		}
 		#title{
 			position: absolute;
@@ -44,6 +45,7 @@
 			display: block;
 			width: 80px;
 			height: 80px;
+			pointer-events: none;
 		}
 		#turn{
 			position: absolute;
@@ -55,6 +57,7 @@
 			display: inline-block;
 			width: 60px;
 			height: 60px;
+			pointer-events: none;
 		}
 		.right{
 			transform: rotateY(180deg) !important;
@@ -67,7 +70,7 @@
 			top: 0;
 			font-size: 30px;
 			font-family: "comic sans ms";
-			z-index: 5;
+			z-index: 999;
 			background: url(img/bc.png);
 		}
 		#loading:after{
@@ -90,17 +93,20 @@
 			display: block;
 			width: 50px;
 			height: 50px;
+			pointer-events: none;
 		}
 		#tips{
 			position: absolute;
+			z-index: 5;
 			width: 200px;
 			top: 50%;
 			left: 50%;
 			margin-left: -100px;
 			margin-top: -115px;
 			padding: 10px;
-			font-family: "microsoft yahei";
+			font-family: "微软雅黑";
 			background-color: rgba(255,255,255,0.6);
+			display: none;
 		}
 		#gameover{
 			position: absolute;
@@ -109,7 +115,7 @@
 			left: 50%;
 			margin-left: -160px;
 			padding: 10px;
-			font-family: "microsoft yahei";
+			font-family: "微软雅黑";
 			background-color: rgba(255,255,255,0.6);
 			display: none;
 		}
@@ -203,6 +209,8 @@
 		      manager.onLoad = function(){
 		      console.log('resourse complete!');
 		      loading = true;
+		      var tips = document.getElementById('tips');
+		      tips.style.display = 'block';
 		    };
 		    
 			scene = new THREE.Scene();
