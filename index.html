@@ -23,6 +23,7 @@
 			background: url(img/bc.png) no-repeat;
 			background-size: cover;
 			pointer-events: none;
+			opacity: 0;
 		}
 		#title{
 			position: absolute;
@@ -204,13 +205,15 @@
 			    
 			var loading = false;  
 			var gameover = false;
-			var load = document.getElementById('loading');  
+			var load = document.getElementById('loading'); 
+			var start = document.getElementById('world');
 			var manager = new THREE.LoadingManager();
 		      manager.onLoad = function(){
 		      console.log('resourse complete!');
 		      loading = true;
 		      var tips = document.getElementById('tips');
 		      tips.style.display = 'block';
+		      start.style.opacity = 1;
 		    };
 		    
 			scene = new THREE.Scene();
