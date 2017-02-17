@@ -16,14 +16,12 @@
 		<script type="text/javascript" src="js/tween.js" ></script>
 	</head>
 	<style>
-	    body,html{width: 100%;height: 100%;margin: 0;padding: 0;overflow: hidden;}
+	    body,html{width: 100%;height: 100%;margin: 0;padding: 0;overflow: hidden;-webkit-touch-callout: none}
 		#world{
 			width: 100%;
 			height: 100%;
 			background: url(img/bc.png) no-repeat;
 			background-size: cover;
-			pointer-events: none;
-			opacity: 0;
 		}
 		#title{
 			position: absolute;
@@ -46,7 +44,6 @@
 			display: block;
 			width: 80px;
 			height: 80px;
-			pointer-events: none;
 		}
 		#turn{
 			position: absolute;
@@ -58,7 +55,6 @@
 			display: inline-block;
 			width: 60px;
 			height: 60px;
-			pointer-events: none;
 		}
 		.right{
 			transform: rotateY(180deg) !important;
@@ -71,8 +67,8 @@
 			top: 0;
 			font-size: 30px;
 			font-family: "comic sans ms";
-			z-index: 999;
-			background: url(img/bc.png);
+			z-index: 5;
+			background-color: #FFCF68;
 		}
 		#loading:after{
 			display:inline-block;
@@ -94,11 +90,9 @@
 			display: block;
 			width: 50px;
 			height: 50px;
-			pointer-events: none;
 		}
 		#tips{
 			position: absolute;
-			z-index: 5;
 			width: 200px;
 			top: 50%;
 			left: 50%;
@@ -205,15 +199,13 @@
 			    
 			var loading = false;  
 			var gameover = false;
-			var load = document.getElementById('loading'); 
-			var start = document.getElementById('world');
+			var load = document.getElementById('loading');  
 			var manager = new THREE.LoadingManager();
 		      manager.onLoad = function(){
 		      console.log('resourse complete!');
 		      loading = true;
 		      var tips = document.getElementById('tips');
 		      tips.style.display = 'block';
-		      start.style.opacity = 1;
 		    };
 		    
 			scene = new THREE.Scene();
