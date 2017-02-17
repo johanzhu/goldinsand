@@ -22,6 +22,7 @@
 			height: 100%;
 			background: url(img/bc.png) no-repeat;
 			background-size: cover;
+			-webkit-touch-callout:none;
 		}
 		#title{
 			position: absolute;
@@ -44,6 +45,7 @@
 			display: block;
 			width: 80px;
 			height: 80px;
+			-webkit-touch-callout:none;
 		}
 		#turn{
 			position: absolute;
@@ -56,8 +58,12 @@
 			width: 60px;
 			height: 60px;
 		}
+		.left{
+			-webkit-touch-callout:none;
+		}
 		.right{
 			transform: rotateY(180deg) !important;
+			-webkit-touch-callout:none;
 		}
 		#loading{
 			width: 100%;
@@ -90,6 +96,7 @@
 			display: block;
 			width: 50px;
 			height: 50px;
+			-webkit-touch-callout:none;
 		}
 		#tips{
 			position: absolute;
@@ -139,7 +146,7 @@
 			<img src="img/walk.png"/>
 		</div>
 		<div id="turn">
-			<span id="left"><img src="img/left.png"/></span> <span id="right"><img class="right" src="img/left.png"/></span>
+			<span id="left"><img class="left" src="img/left.png"/></span> <span id="right"><img class="right" src="img/left.png"/></span>
 		</div>
 		<div id="score">
 			<img src="img/coin.png"/><div id="scorenNum">0</div>
@@ -296,7 +303,7 @@
         particleCount: 750,
       });
       particleGroupCrash.addEmitter( crashEmitter );
-      //scene.add( particleGroupCrash.mesh );
+      scene.add( particleGroupCrash.mesh );
       
       /*人物*/
      var cameraPos = camera.position.clone();
