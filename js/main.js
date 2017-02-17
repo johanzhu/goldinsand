@@ -113,3 +113,4 @@ touch.on('#x','touchstart',function(){
 touch.on('#github','touchstart',function(){
 	window.open('https://github.com/johanzhu/goldinsand');
 });
+window.ontouchstart = function(e) { e.preventDefault(); };
