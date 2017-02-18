@@ -78,7 +78,7 @@ var scene,
             objLoader.setPath('model/');
             objLoader.load( 'scene.obj', function (object){
               object.name = 'scene';
-		      scene.add(object);
+		      //scene.add(object);
 		      }, onProgress);
             });
        
