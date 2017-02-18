@@ -1,4 +1,8 @@
-var scene,
+var world = document.createElement('div');
+world.setAttribute('id','world');
+document.body.appendChild(world);
+
+            var scene,
 			    scene2,
 			    camera,
 		 	    renderer,
@@ -33,7 +37,7 @@ var scene,
 		    camera2 = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,0.001,10000);
 			camera.position.set(0,50,1800);
 			camera2.position.set(0,50,1800);
-		    renderer = new THREE.WebGLRenderer({antialias:true});
+		    renderer = new THREE.WebGLRenderer({alpha:true,antialias:true});
 		    renderer.setSize(window.innerWidth,window.innerHeight);
 		    renderer.shadowMapEnabled = true;
 		    var container =  document.getElementById('world');
