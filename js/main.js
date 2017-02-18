@@ -69,6 +69,7 @@ window.addEventListener('keydown',function(e){
 })
 /*touchEvent*/
 touch.on('#walk','touchstart',function(){
+	console.log('a');
 	$('#walk').css({'opacity':'1'});
 	walk = setInterval(function(){
   	  camera.position.z -= Math.cos(camera.rotation.y)*10;
@@ -86,6 +87,7 @@ touch.on('#walk','touchend',function(){
 
 
 touch.on('#left','touchstart',function(){
+	console.log('a');
 	$('#left').css({'opacity':'1'});
 	left = setInterval(function(){
   	  camera.rotation.y += turnSpeed;
@@ -98,6 +100,7 @@ touch.on('#left','touchend',function(){
 });
 
 touch.on('#right','touchstart',function(){
+	console.log('a');
 	$('#right').css({'opacity':'1'});
 	right = setInterval(function(){
   	  camera.rotation.y -= turnSpeed;
@@ -110,7 +113,10 @@ touch.on('#right','touchend',function(){
 touch.on('#x','touchstart',function(){
 	$('#tips').css({'display':'none'});
 });
+
 touch.on('#github','touchstart',function(){
 	window.open('https://github.com/johanzhu/goldinsand');
 });
-window.ontouchstart = function(e) { e.preventDefault(); };
+window.ontouchstart = function(e) { 
+    e.preventDefault(); 
+};
