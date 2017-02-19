@@ -120,3 +120,12 @@ touch.on('#github','touchstart',function(){
 window.ontouchstart = function(e) { 
     e.preventDefault(); 
 };
+/*music*/
+function audioAutoPlay(id){
+    var audio = document.getElementById(id);
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+    }, false);
+}
+audioAutoPlay('bc');
