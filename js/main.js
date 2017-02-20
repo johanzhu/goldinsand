@@ -2,10 +2,7 @@ var walk,
     left,
     right;
 var walkSpeed = 20;
-var turnSpeed = Math.PI*(5/180);
-//$('#walk').mousedown(mouseStateWalk).mouseup(mouseStateWalk);
-//$('#left').mousedown(mouseStateLeft).mouseup(mouseStateLeft);
-//$('#right').mousedown(mouseStateRight).mouseup(mouseStateRight);
+var turnSpeed = Math.PI*(2/180);
 function mouseStateWalk(e) {
   if (e.type == "mouseup") {
     clearInterval(walk);
@@ -14,12 +11,10 @@ function mouseStateWalk(e) {
   }
   if (e.type == "mousedown") {
     walk = setInterval(function(){
-  	  camera.position.z -= Math.cos(camera.rotation.y)*10;
-  	  camera.position.x -= Math.sin(camera.rotation.y)*10;
+  	  camera.position.z -= Math.cos(camera.rotation.y)*5;
+  	  camera.position.x -= Math.sin(camera.rotation.y)*5;
   	  if(clap)clap.rotation.y += Math.PI/2;
   	  if(foot)foot.rotation.y -= Math.PI/2;
-  	  
-      console.log('a');
     }, 100);
   }
 }
@@ -49,14 +44,14 @@ function mouseStateRight(e) {
 /*keyBoardEvent*/
 window.addEventListener('keydown',function(e){
 	if(e.keyCode == 87){
-      camera.position.z -= Math.cos(camera.rotation.y)*10;
-  	  camera.position.x -= Math.sin(camera.rotation.y)*10;
+      camera.position.z -= Math.cos(camera.rotation.y)*5;
+  	  camera.position.x -= Math.sin(camera.rotation.y)*5;
   	  if(clap)clap.rotation.y += Math.PI/2;
   	  if(foot)foot.rotation.y -= Math.PI/2;
 	}
 	if(e.keyCode == 83){
-	  camera.position.z += Math.cos(camera.rotation.y)*10;
-  	  camera.position.x += Math.sin(camera.rotation.y)*10;
+	  camera.position.z += Math.cos(camera.rotation.y)*5;
+  	  camera.position.x += Math.sin(camera.rotation.y)*5;
   	  if(clap)clap.rotation.y += Math.PI/2;
   	  if(foot)foot.rotation.y -= Math.PI/2;
 	}
@@ -72,8 +67,8 @@ touch.on('#walk','touchstart',function(){
 	console.log('a');
 	$('#walk').css({'opacity':'1'});
 	walk = setInterval(function(){
-  	  camera.position.z -= Math.cos(camera.rotation.y)*10;
-  	  camera.position.x -= Math.sin(camera.rotation.y)*10;
+  	  camera.position.z -= Math.cos(camera.rotation.y)*5;
+  	  camera.position.x -= Math.sin(camera.rotation.y)*5;
   	  if(clap)clap.rotation.y += Math.PI/2;
   	  if(foot)foot.rotation.y -= Math.PI/2;
     },16.6);
@@ -117,7 +112,8 @@ touch.on('#x','touchstart',function(){
 touch.on('#github','touchstart',function(){
 	window.open('https://github.com/johanzhu/goldinsand');
 });
-window.ontouchstart = function(e) { 
+
+window.ontouchstart = function(e) {
     e.preventDefault(); 
 };
 /*music*/

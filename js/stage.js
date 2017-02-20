@@ -231,7 +231,7 @@ document.body.appendChild(world);
 	  	model.scale.set(30,30,30);
 	  	model.name = 'coin';
 	  	coin = model;
-	  	for(var i=0;i<100;i++){
+	  	for(var i=0;i<200;i++){
 	  		generateCoin();
 	  	}
 	  });
@@ -349,6 +349,14 @@ document.body.appendChild(world);
           clone.rotation.y = Math.PI*range(0,1);
           scene.add(clone);
         }
+		function generateCactus(){
+          var clone = cactus.clone();
+          clone.position.x = range(-2350,2360);
+          clone.position.z = range(-2360,2630);
+          clone.position.y = 0;
+          clone.rotation.y = Math.PI*range(0,1);
+          scene.add(clone);
+        }
 		function collide(){
 			  var origin =  new THREE.Vector3(
 			  	camera.position.x - Math.sin(camera.rotation.y)*190,
@@ -374,7 +382,6 @@ document.body.appendChild(world);
 			  		}else{
 			  			console.log(item.object.name);
 			  			eatGold();
-			  			eatCoin.play();
 			  			scene.remove(item.object);
 			  		}
 			  	})
@@ -386,7 +393,6 @@ document.body.appendChild(world);
 			  		}else{
 			  			console.log(item.object.name);
 			  			eatGold();
-			  			eatCoin.play();
 			  			scene.remove(item.object);
 			  		}
 			  	})
@@ -398,7 +404,6 @@ document.body.appendChild(world);
 			  		}else{
 			  			console.log(item.object.name);
 			  			eatGold();
-			  			eatCoin.play();
 			  			scene.remove(item.object);
 			  		}
 			  	})
@@ -408,6 +413,7 @@ document.body.appendChild(world);
 		  var score = document.getElementById('scorenNum');
 		  var scoreNum = parseInt(score.innerHTML);
 		  score.innerHTML = scoreNum + 1;
+		    eatCoin.play();
 		}
 		function gameOver(){
 		  var score = document.getElementById('scorenNum');
