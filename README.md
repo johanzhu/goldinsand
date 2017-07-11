@@ -1,5 +1,5 @@
 # goldinsand
-![image](https://github.com/johanzhu/goldinsand/blob/gh-pages/img/goldinsand.png)
+![image](https://github.com/johanzhu/goldinsand/blob/gh-pages/img/goldinsand.png)</br>
 A game based on three.js.You can play it on your phone !
 
 Collect coins!</br>
