@@ -1,0 +1,110 @@
+body,html{width: 100%;height: 100%;margin: 0;padding: 0;overflow: hidden;-webkit-touch-callout: none}
+		#world{
+			width: 100%;
+			height: 100%;
+			background: url(img/bc.png) no-repeat;
+			background-size: cover;
+			-webkit-touch-callout:none;
+		}
+		#walk{
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			left: 3px;
+			bottom: 0;
+			-webkit-touch-callout:none;
+			opacity: 0.6;
+			background: url(img/sprites.png) 0 0 no-repeat;
+		}
+		#turn{
+			position: absolute;
+			width: 120px;
+			height: 60px;
+			right: 10px;
+			bottom: 0;
+			opacity: 0.6;
+			-webkit-touch-callout:none;
+		}
+		#left{
+			float: left;
+			width: 60px;
+			height: 60px;
+			background: url(img/sprites.png) -80px 0 no-repeat;
+			-webkit-touch-callout:none;
+		}
+		#right{
+			float: left;
+			width: 60px;
+			height: 60px;
+			background: url(img/sprites.png) -80px 0 no-repeat;
+			transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+			-webkit-touch-callout:none;
+		}
+		#loading{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			background-color: #FFCF68;
+		}
+		#load{
+			font-family: "微软雅黑";
+	font-size: 30px;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 30px;
+	margin: -15px 0 0 -50px;
+}
+#score{
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -25px;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	text-align: center;
+}
+#scoreImg{
+	width: 50px;
+	height: 50px;
+	background: url(img/sprites.png) -140px 0 no-repeat;
+}
+#tips{
+	position: absolute;
+	width: 200px;
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+	margin-top: -115px;
+	padding: 10px;
+	font-family: "微软雅黑";
+	background-color: rgba(255,255,255,0.6);
+	display: none;
+}
+#gameover{
+	position: absolute;
+	width: 320px;
+	top: 30%;
+	left: 50%;
+	margin-left: -160px;
+	padding: 10px;
+	font-family: "微软雅黑";
+	background-color: rgba(255,255,255,0.6);
+	display: none;
+}
+#x{
+	border: none;
+	background-color: rgba(255,255,255,0.6);
+	margin-left: 180px;
+}
+#github{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(img/sprites.png) -100px -60px no-repeat;
+}
